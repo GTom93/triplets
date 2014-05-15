@@ -43,7 +43,6 @@ static player_t G_players[2];
  *====================================*/
 static void player_reset(player_t* const player_ptr);
 
-
 /*=====================================
  * Public functions
  *===================================*/

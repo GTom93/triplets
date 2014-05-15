@@ -62,9 +62,29 @@ typedef struct game
 	int board_rows;     	// number of rows of the board
 }game_t;
 
+
 /**
- * FIXME: data structures to hold the game's statistics
+ * auxiliary structure to assign who is currently moves, and change current player
+ * @date	2014-05-05
+ * @author	PL team
+ **/
+typedef struct
+{
+  player_t current_player_move;
+  player_t previous_player_move;
+  player_t tmp; //temporary
+}current_move_t;
+
+/**
+ * Stores the move played by the user
  */
+typedef struct
+{
+    	char Y;		//char that indicates the column for the user
+    	int X;		//int that indicates the row for the user and the index of the board later
+    	int Y_int;	//int to indicate the index of the column in the matrix
+}position_t;
+
 
 /*=====================================
  * External declarations
@@ -80,6 +100,5 @@ extern player_t* get_players_ptr(void);
 extern int is_valid_board_size(const int board_size);
 extern int set_board_size(const int board_size);
 extern void reset_data_structs(void);
-
 
 #endif

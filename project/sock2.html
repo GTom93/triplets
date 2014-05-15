@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Web socket Experiment</title>
+    <script type="text/javascript">
+        function callWebSocket() {
+
+            var socket = new WebSocket("ws://127.0.0.1:1234/3a");
+            socket.send("asdf");
+        }
+    </script>
+</head>
+
+<body>
+    <input type="button" value="Open Connecton" onclick="callWebSocket()" />
+</body>
+</html>
